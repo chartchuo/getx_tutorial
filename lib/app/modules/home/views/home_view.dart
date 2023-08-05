@@ -23,6 +23,10 @@ class HomeView extends GetView<HomeController> {
               onPressed: () => controller.increment(),
               child: const Text('Inc'),
             ),
+            ElevatedButton(
+              onPressed: () => Get.toNamed('/home/detail'),
+              child: const Text('Goto Detail'),
+            ),
           ],
         ),
       ),
