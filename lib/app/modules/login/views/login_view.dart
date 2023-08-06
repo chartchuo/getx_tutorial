@@ -13,9 +13,17 @@ class LoginView extends GetView<LoginController> {
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-            onPressed: () => Get.offAllNamed('/home'),
-            child: const Text('Goto Home')),
+        child: Column(
+          children: [
+            Obx(() => Text('username ${controller.user.value.username}')),
+            ElevatedButton(
+                onPressed: () => controller.updateUsername('New Username'),
+                child: const Text('update username')),
+            ElevatedButton(
+                onPressed: () => Get.offAllNamed('/home'),
+                child: const Text('Goto Home')),
+          ],
+        ),
       ),
     );
   }

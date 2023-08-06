@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/app/controllers/app_controller.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,24 +12,15 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Obx(() => Text(
-                  'Count ${Get.find<AppController>().count.value}',
-                  style: const TextStyle(fontSize: 20),
-                )),
-            ElevatedButton(
-              onPressed: () => Get.find<AppController>().increment(),
-              child: const Text('Inc'),
-            ),
-            ElevatedButton(
-              onPressed: () => Get.toNamed('/home/detail'),
-              child: const Text('Goto Detail'),
-            ),
-          ],
-        ),
-      ),
+      body: Obx(() {
+        return ListView.builder(
+            itemCount: controller.products.length,
+            itemBuilder: (context, i) {
+              return ListTile(
+                title: Text(controller.products[i].title),
+              );
+            });
+      }),
     );
   }
 }

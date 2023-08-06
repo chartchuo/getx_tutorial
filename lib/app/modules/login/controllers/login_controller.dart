@@ -1,23 +1,23 @@
 import 'package:get/get.dart';
+import 'package:getx_tutorial/app/data/models/user_model.dart';
 
 class LoginController extends GetxController {
   //TODO: Implement LoginController
 
-  final count = 0.obs;
+  final user = User().obs;
+
   @override
   void onInit() {
     super.onInit();
+    user.update((u) {
+      u?.username = 'abc';
+      u?.email = 'abc@def.com';
+    });
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void updateUsername(String newUsername) {
+    user.update((u) {
+      u?.username = newUsername;
+    });
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
