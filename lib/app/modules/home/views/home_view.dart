@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_tutorial/app/controllers/app_controller.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -16,11 +17,11 @@ class HomeView extends GetView<HomeController> {
         child: Column(
           children: [
             Obx(() => Text(
-                  'Count ${controller.count.value}',
+                  'Count ${Get.find<AppController>().count.value}',
                   style: const TextStyle(fontSize: 20),
                 )),
             ElevatedButton(
-              onPressed: () => controller.increment(),
+              onPressed: () => Get.find<AppController>().increment(),
               child: const Text('Inc'),
             ),
             ElevatedButton(
