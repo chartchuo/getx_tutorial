@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_tutorial/app/routes/app_pages.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -20,8 +21,11 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () => controller.updateUsername('New Username'),
                 child: const Text('update username')),
             ElevatedButton(
-                onPressed: () => Get.offAllNamed('/home'),
+                onPressed: () => Get.offAllNamed(Routes.HOME),
                 child: const Text('Goto Home')),
+            ElevatedButton(
+                onPressed: () => Get.offAllNamed(Routes.CLOCK),
+                child: const Text('Goto Clock')),
           ],
         ),
       ),

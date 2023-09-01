@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/clock/bindings/clock_binding.dart';
+import '../modules/clock/views/clock_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/detail/bindings/detail_binding.dart';
 import '../modules/home/detail/views/detail_view.dart';
@@ -13,7 +15,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SIMPLE;
+  static const INITIAL = Routes.CLOCK;
 
   static final routes = [
     GetPage(
@@ -36,6 +38,11 @@ class AppPages {
     GetPage(
       name: _Paths.SIMPLE,
       page: () => const SimpleView(),
+    ),
+    GetPage(
+      name: _Paths.CLOCK,
+      page: () => const ClockView(),
+      binding: ClockBinding(),
     ),
   ];
 }
