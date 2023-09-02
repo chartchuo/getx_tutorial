@@ -22,7 +22,10 @@ class LoginView extends GetView<LoginController> {
                 child: const Text('update username')),
             ElevatedButton(
                 onPressed: () => Get.offAllNamed(Routes.HOME),
-                child: const Text('Goto Home')),
+                child: const Text('Goto /Home')),
+            ElevatedButton(
+                onPressed: () => Get.toNamed(Routes.DETAIL),
+                child: const Text('Goto Home/Detail')),
             ElevatedButton(
                 onPressed: () => Get.offAllNamed(Routes.CLOCK),
                 child: const Text('Goto Clock')),

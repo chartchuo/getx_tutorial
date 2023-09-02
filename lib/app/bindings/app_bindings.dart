@@ -5,9 +5,10 @@ import 'package:getx_tutorial/app/data/providers/api_provider.dart';
 class AppBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<AppController>(
-      () => AppController(),
+    Get.put<AppController>(
+      AppController(),
     );
+
     Get.lazyPut<ApiProvider>(
       () => ApiProvider(),
     );
