@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
 
 import '../middlewares/auth_middleware.dart';
@@ -13,16 +11,25 @@ import '../modules/login/auth_error/bindings/auth_error_binding.dart';
 import '../modules/login/auth_error/views/auth_error_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/main_menu/bindings/main_menu_binding.dart';
+import '../modules/main_menu/views/main_menu_view.dart';
 import '../modules/simple/views/simple_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.MAIN_MENU;
 
   static final routes = [
+    GetPage(
+      name: _Paths.MAIN_MENU,
+      page: () => const MainMenuView(),
+      binding: MainMenuBinding(),
+    ),
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),

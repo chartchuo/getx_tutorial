@@ -11,6 +11,7 @@ abstract class Routes {
   static const SIMPLE = _Paths.SIMPLE;
   static const CLOCK = _Paths.CLOCK;
   static const AUTH_ERROR = _Paths.LOGIN + _Paths.AUTH_ERROR;
+  static const MAIN_MENU = _Paths.MAIN_MENU;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const SIMPLE = '/simple';
   static const CLOCK = '/clock';
   static const AUTH_ERROR = '/auth-error';
+  static const MAIN_MENU = '/main-menu';
 }
