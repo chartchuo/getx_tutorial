@@ -9,7 +9,7 @@ class ClockController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    print('start timer');
+    Get.log('start timer');
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       updateCurrentTime();
     });
@@ -18,7 +18,7 @@ class ClockController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    print('on ready');
+    Get.log('on ready');
     // Get.toNamed(Routes.LOGIN);
     // Get.offAndToNamed(Routes.LOGIN);
     // Get.showSnackbar(const GetSnackBar(title: 'title', message: 'message'));
@@ -27,7 +27,7 @@ class ClockController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    print('cancel timer');
+    Get.log('cancel timer');
     timer.cancel();
   }
 

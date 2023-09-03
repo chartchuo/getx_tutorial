@@ -5,9 +5,6 @@ import 'package:getx_tutorial/app/data/models/api_model.dart';
 import 'package:getx_tutorial/app/data/providers/api_provider.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
   final products = <Product>[].obs;
   @override
   void onInit() {
@@ -31,6 +28,4 @@ class HomeController extends GetxController {
     products.clear();
     products.addAll(p);
   }
-
-  void increment() => count.value++;
 }

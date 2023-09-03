@@ -2,8 +2,6 @@ import 'package:get/get.dart';
 import 'package:getx_tutorial/app/data/models/user_model.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
-
   final user = User().obs;
 
   @override
