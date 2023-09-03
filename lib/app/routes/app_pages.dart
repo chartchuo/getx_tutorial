@@ -14,6 +14,8 @@ import '../modules/login/views/login_view.dart';
 import '../modules/main_menu/bindings/main_menu_binding.dart';
 import '../modules/main_menu/views/main_menu_view.dart';
 import '../modules/simple/views/simple_view.dart';
+import '../modules/translation/bindings/translation_binding.dart';
+import '../modules/translation/views/translation_view.dart';
 
 // ignore_for_file: constant_identifier_names
 
@@ -65,6 +67,11 @@ class AppPages {
       name: _Paths.CLOCK,
       page: () => const ClockView(),
       binding: ClockBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRANSLATION,
+      page: () => const TranslationView(),
+      binding: TranslationBinding(),
     ),
   ];
 }
